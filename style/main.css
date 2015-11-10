@@ -1,0 +1,13 @@
+body {
+	font-family: sans-serif;
+}
+
+noscript p {
+	width: 100%;
+	background-color: red;
+	text-align: center;;
+}
+
+.container {
+	margin: 0 10%;
+}

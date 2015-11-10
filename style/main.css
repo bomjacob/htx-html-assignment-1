@@ -11,3 +11,6 @@ noscript p {
 .container {
 	margin: 0 10%;
 }
+.page {
+	height: 300px;
+}

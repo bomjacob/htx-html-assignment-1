@@ -8,9 +8,11 @@
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="script/jquery.smint.js"></script>
+		<script src="script/jssor.slider.min.js"></script>
 
 		<link href="style/reset.css" rel="stylesheet" />
 		<link href="style/main.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
 		<script>
 			$(document).ready( function() {
@@ -19,54 +21,69 @@
 			    });
 			});
 		</script>
+		<script>window.twttr = (function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0],
+		    t = window.twttr || {};
+		  if (d.getElementById(id)) return t;
+		  js = d.createElement(s);
+		  js.id = id;
+		  js.src = "https://platform.twitter.com/widgets.js";
+		  fjs.parentNode.insertBefore(js, fjs);
+		 
+		  t._e = [];
+		  t.ready = function(f) {
+		    t._e.push(f);
+		  };
+		 
+		  return t;
+		}(document, "script", "twitter-wjs"));</script>
 	</head>
 
 	<body>
-		<noscript><p>FUCK YOU; ENABLE JAVASCRIPT NOOB!</p></noscript>
+		<noscript><p>You seem to have disabled JavaScript. This site will not function properly without it. Please follow <a href="http://enable-javascript.com/">this guide</a> to learn how to enable it.</p></noscript>
 		<div class="container">
 			<div class="page top">
-				<div class="inner">
-					<div class="t1_3">
-						<img class="logo" alt="LOGO" src="img/top.png" />
-					</div>
-					<div class="t2_3">
-
-					</div>
-				</div>
+				<img class="logo" alt="LOGO" src="img/top.jpg" />
 			</div>
 			<div class="nav">
-				<div class="inner">
-					<a href="#top" class="navButton">Top</a>
-					<a href="#home" class="navButton">Home</a>
-					<a href="#about" class="navButton">About</a>
-					<a href="#page1" class="navButton">Page 1000</a>
-					<a href="#page2" class="navButton">Page 2000</a>
-					<a href="#page3" class="navButton">Page 3000</a>
+				<div class="navInner">
+					<a href="#top" class="navButton" style="padding: 7px 10px 16px 10px;"><i class="material-icons md-48">home</i></a>
+					<a href="#about" class="navButton">ABOUT</a>
+					<a href="#page1" class="navButton">PAGE 1000</a>
+					<a href="#page2" class="navButton">PAGE 2000</a>
+					<a href="#page3" class="navButton">PAGE 3000</a>
+					<a href="#gallery" class="navButton">IMAGES</a>
 				</div>
 			</div>
+			<div class="spacer"></div>
 			<div class="page home" style="background-color: red;">
 				<div class="inner">
 					<p>HOME</p>
 				</div>
 			</div>
-			<div class="page about" style="background-color: green;">
+			<div id="about" class="page about" style="background-color: green;">
 				<div class="inner">
-					About
+					<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=[]">Tweet</a>
 				</div>
 			</div>
-			<div class="page page1" style="background-color: lightgreen;">
+			<div id="page1" class="page page1" style="background-color: lightgreen;">
 				<div class="inner">
 					Page 1000
 				</div>
 			</div>
-			<div class="page page2" style="background-color: blue;">
+			<div id="page2" class="page page2" style="background-color: blue;">
 				<div class="inner">
 					Page 2000
 				</div>
 			</div>
-			<div class="page page3" style="background-color: pink;">
+			<div id="page3" class="page page3" style="background-color: pink;">
 				<div class="inner">
 					Page 3000
+				</div>
+			</div>
+			<div id="gallery" class="page gallery" style="background-color: orange;">
+				<div class="inner">
+					IMAGES
 				</div>
 			</div>
 			<div class="footer" style="background-color: magenta;">

@@ -8,35 +8,10 @@
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="script/jquery.smint.js"></script>
-		<script src="script/jssor.slider.min.js"></script>
 
 		<link href="style/reset.css" rel="stylesheet" />
 		<link href="style/main.css" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
-		<script>
-			$(document).ready( function() {
-			    $('.nav').smint({
-			    	'scrollSpeed' : 1000
-			    });
-			});
-		</script>
-		<script>window.twttr = (function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0],
-		    t = window.twttr || {};
-		  if (d.getElementById(id)) return t;
-		  js = d.createElement(s);
-		  js.id = id;
-		  js.src = "https://platform.twitter.com/widgets.js";
-		  fjs.parentNode.insertBefore(js, fjs);
-		 
-		  t._e = [];
-		  t.ready = function(f) {
-		    t._e.push(f);
-		  };
-		 
-		  return t;
-		}(document, "script", "twitter-wjs"));</script>
 	</head>
 
 	<body>
@@ -95,7 +70,30 @@
 				</div>
 			</div>
 		</div>
-
+		
+		<script>
+			$(document).ready( function() {
+			    $('.nav').smint({
+			    	'scrollSpeed' : 1000
+			    });
+			});
+		</script>
+		<script>window.twttr = (function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0],
+		    t = window.twttr || {};
+		  if (d.getElementById(id)) return t;
+		  js = d.createElement(s);
+		  js.id = id;
+		  js.src = "https://platform.twitter.com/widgets.js";
+		  fjs.parentNode.insertBefore(js, fjs);
+		 
+		  t._e = [];
+		  t.ready = function(f) {
+		    t._e.push(f);
+		  };
+		 
+		  return t;
+		}(document, "script", "twitter-wjs"));</script>
 	</body>
 
 </html>

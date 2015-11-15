@@ -47,10 +47,10 @@ noscript p {
 	letter-spacing: 1px;
 }
 .nav a:hover {
-	background: #9C54B1;
+	background: #9C30BD;
 }
 .nav a.active {
-	background: #C366DF;
+	background: #9C54B1;
 }
 .navInner {
 	width: 960px;

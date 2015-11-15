@@ -19,7 +19,7 @@ noscript p {
 .inner {
 	width: 960px;
 	margin: 0 auto;
-	min-height: 100px;
+	min-height: 400px;
 	padding: 30px 10px;
 }
 .top {

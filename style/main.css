@@ -49,7 +49,7 @@ noscript p {
 .nav a:hover {
 	background: #9C54B1;
 }
-.nav a:active {
+.nav a.active {
 	background: #772F8D;
 }
 .navInner {

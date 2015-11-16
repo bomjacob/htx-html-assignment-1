@@ -94,12 +94,12 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 				if(optionLocs[index][0] <= scrollTop && scrollTop <= optionLocs[index][1]){	
 					if(direction == "up"){
 						$("#"+id).addClass("active");
-						if(optionLocs[index+1][2] !== undefined) {
+						if(typeof optionLocs[index+1] !== 'undefined') {
 							$("#"+optionLocs[index+1][2]).removeClass("active");
 						}
 					} else if(index > 0) {
 						$("#"+id).addClass("active");
-						if(optionLocs[index+1][2] !== undefined) {
+						if(typeof optionLocs[index+1] !== 'undefined') {
 							$("#"+optionLocs[index-1][2]).removeClass("active");
 						}
 					} else if(direction == undefined){

@@ -58,7 +58,6 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 			if (!$(this).hasClass("extLink")) {
 				$(this).attr('id', id);
 			}
-
 			
 			//Fill the menu
 			optionLocs.push(Array(
@@ -95,10 +94,14 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 				if(optionLocs[index][0] <= scrollTop && scrollTop <= optionLocs[index][1]){	
 					if(direction == "up"){
 						$("#"+id).addClass("active");
-						$("#"+optionLocs[index+1][2]).removeClass("active");
+						if(optionLocs[index+1][2] !== undefined) {
+							$("#"+optionLocs[index+1][2]).removeClass("active");
+						}
 					} else if(index > 0) {
 						$("#"+id).addClass("active");
-						$("#"+optionLocs[index-1][2]).removeClass("active");
+						if(optionLocs[index+1][2] !== undefined) {
+							$("#"+optionLocs[index-1][2]).removeClass("active");
+						}
 					} else if(direction == undefined){
 						$("#"+id).addClass("active");
 					}

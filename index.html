@@ -8,6 +8,8 @@
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="script/jquery.smint.js"></script>
+		<script src="script/jssor.slider.min.js"></script>
+		<script src="script/main.js"></script>
 
 		<link href="style/reset.css" rel="stylesheet" />
 		<link href="style/main.css" rel="stylesheet" />
@@ -27,21 +29,21 @@
 					<a href="#page1" class="navButton">PAGE 1000</a>
 					<a href="#page2" class="navButton">PAGE 2000</a>
 					<a href="#page3" class="navButton">PAGE 3000</a>
-					<a href="#gallery" class="navButton">IMAGES</a>
+					<a href="#gallery" class="navButton">GALLERY</a>
+					<a href="#top" class="navButton" style="display: none">Fixer</a>
 				</div>
 			</div>
-			<div class="spacer"></div>
-			<div class="page home" style="background-color: red;">
+			<!--<div class="page home" style="background-color: red;">
 				<div class="inner">
 					<p>HOME</p>
 				</div>
-			</div>
+			</div>-->
 			<div id="about" class="page about" style="background-color: green;">
 				<div class="inner">
+					<h1>About</h1>
 					<p>This is a fan-made page about vocaloids, composed by a couple of students (namely, blablabla and blah) about the vocaloid software and media as a part of a school project. Vocaloid is a technology for singing voice synthesis - basically, it is a software that allows you to combine phonemes to make words; or rather, make voice banks produce words in the way that you want them to. In this way, vocaloids can be used to add song to music, just like any piano in a music program. More than 100.000 songs have already been made in Hatsune MIku’s name (Don’t know who she is? Why don’t you read <a href="#page1">this page!</a>). The vocaloid software is owned by the Yamaha Corporation. You can find their website <a href="http://vocaloid.com">here!</a> Or for those of you that do not speak Japanese, there’s an English version <a href="http://vocaloid.com/en/">here.</a><br/></p>
 					<p>This project took several hours and a lot of boredom.  So why don’t you go tell us how much you like it on <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=I%20just%20found%20this%20amazing%20site%20about%20%23vocaloid%20!!!%20Omg%2C%20%E3%81%99%E3%81%94%E3%81%84!%20https%3A%2F%2Fbomjacob.github.io%2Fhtx-html-assignment-1%2F">Tweet</a> <br/>Or something. We needed to put external links here.<br/></p>
 					<p>All of the pictures used on this page have been used with non-commercial purposes in mind. Please respect that; and if you want to use this code of ours for something, there is a nice little license you can read beforehand, so feel free to do so!<br/></p>
-
 				</div>
 			</div>
 			<div id="page1" class="page page1" style="background-color: lightgreen;">
@@ -61,26 +63,54 @@
 			</div>
 			<div id="gallery" class="page gallery" style="background-color: orange;">
 				<div class="inner">
-					IMAGES
+					<!--SLIDER-->
+					<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 500px; overflow: hidden; visibility: hidden;">
+			        <!-- Loading Screen -->
+			        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+			            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+			            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+			        </div>
+			        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 500px; overflow: hidden;">
+			            <div style="display: none;">
+			                <img data-u="image" src="img/gallery/01.jpg" />
+			            </div>
+			        <!-- Bullet Navigator -->
+			        <div data-u="navigator" class="jssorb13" style="bottom:16px;right:16px;" data-autocenter="1">
+			            <!-- bullet navigator item prototype -->
+			            <div data-u="prototype" style="width:21px;height:21px;"></div>
+			        </div>
+			        <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
+			    </div>
 				</div>
 			</div>
-			<div class="footer" style="background-color: magenta;">
+			<div id="gallery" class="footer page gallery" style="background-color: magenta;">
 				<div class="inner">
-					Footer
+					<div style="width: 45%; float: left">
+						<h1>Image Credit</h1>
+						<p>Main header picture is graciously provided by CHOK人 on <a href="http://forum8.hkgolden.com/view.aspx?message=4453290&page=15">hkgolden</a>.</p>
+						<p>The first 4 images of the slideshow are released under a creative commons license, as per <a href="http://piapro.net/intl/en_for_creators.html">this site</a>.</p>
+						<img src="img/cc_by_nc.gif" height="60" width="171" />
+					</div>
+					<div style="width: 45%; float: right; margin-left: 9%;">
+						<h1>License</h1>
+					</div>
 				</div>
 			</div>
 		</div>
 		
 		<script>
+			// Code for smint. This code is only here in case it doesn't work from main.js (which is often apparently)
+			function smint() {
+				$('.nav').smint({
+			    	'scrollSpeed' : 1000
+			    });
+			}
 			$(document).ready( function() {
+				smint();
 				$(window).load(function() {
-				    $('.nav').smint({
-				    	'scrollSpeed' : 1000
-				    });
+				    smint();
 				    setTimeout(function() {
-					    $('.nav').smint({
-					    	'scrollSpeed' : 1000
-					    });
+					    smint();
 					}, 5000);
 				});
 			});

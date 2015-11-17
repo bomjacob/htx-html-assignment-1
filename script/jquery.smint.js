@@ -42,12 +42,12 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 
 
 		if ( settings.scrollSpeed ) {
-				var scrollSpeed = settings.scrollSpeed
+				var scrollSpeed = settings.scrollSpeed;
 			}
 
 		if ( settings.mySelector ) {
-				var mySelector = settings.mySelector
-		};
+				var mySelector = settings.mySelector;
+		}
 
 
 
@@ -64,6 +64,8 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 				$(mySelector+"."+id).position().top-menuHeight, 
 				$(mySelector+"."+id).height()+$(mySelector+"."+id).position().top, id)
 			);
+
+			console.log(optionLocs);
 
 			///////////////////////////////////
 
@@ -102,7 +104,7 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 						if(typeof optionLocs[index+1] !== 'undefined') {
 							$("#"+optionLocs[index-1][2]).removeClass("active");
 						}
-					} else if(direction == undefined){
+					} else if(direction === undefined){
 						$("#"+id).addClass("active");
 					}
 					$.each(optionLocs, function(i){
@@ -133,11 +135,11 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 				// isnt long enough to scroll to the top of the page and trigger the active state.
 
 				if($(window).scrollTop() + $(window).height() == $(document).height()) {
-	       			smintA.removeClass('active')
-	       			$(".smint a:not('.extLink'):last").addClass('active')
+	       			smintA.removeClass('active');
+	       			$(".smint a:not('.extLink'):last").addClass('active');
 	       			
    				} else {
-   					smintA.last().removeClass('active')
+   					smintA.last().removeClass('active');
    				}
 			});
 

@@ -1,5 +1,7 @@
 $(document).ready(function ($) {
 
+  window.scrollTo(0, 0);
+  
   var _SlideshowTransitions = [
     //Fade
     { $Duration: 1200, $Opacity: 2 }

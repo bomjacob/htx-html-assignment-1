@@ -65,7 +65,7 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 				$(mySelector+"."+id).height()+$(mySelector+"."+id).position().top, id)
 			);
 
-			console.log(optionLocs);
+			//console.log(optionLocs);
 
 			///////////////////////////////////
 

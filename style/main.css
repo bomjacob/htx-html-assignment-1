@@ -94,6 +94,10 @@ a:visited{
 .end {
 	padding-right: 0 !important;
 }
+.twitter-share-button {
+	position: relative !important;
+	top: 3px !important;
+}
 
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }

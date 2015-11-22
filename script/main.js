@@ -1,6 +1,6 @@
 $(document).ready(function ($) {
   //navigation bar code
-  $(document).load(function ($) {
+  $(document).load(function () {
     nav = $('.nav');
     navHeight = nav.height();
     navOffset = nav.offset();

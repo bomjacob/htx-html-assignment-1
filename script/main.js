@@ -42,7 +42,7 @@ $(document).ready(function ($) {
         e.preventDefault();
         scrollTo = 0;
         if ($(this).attr('href') != '#top') {
-          scrollTo = $($(this).attr('href')).offset().top - navHeight + 5;
+          scrollTo = $($(this).attr('href')).offset().top - navHeight + 2;
         }
         $('html, body').animate({
           scrollTop: scrollTo
@@ -53,16 +53,20 @@ $(document).ready(function ($) {
 
   //slider code  
   var _SlideshowTransitions = [
-    //Fade
-    { $Duration: 1200, $Opacity: 2 }
+    //Not Fade
+    {$Duration:1200,x:1,$Easing:{$Left:$JssorEasing$.$EaseInOutQuart},
+    $Brother:{$Duration:1200,x:-1,$Easing:{$Left:$JssorEasing$.$EaseInOutQuart}}}
   ];
 
   var jssor_1_options = {
     $AutoPlay: true,
+    $AutoPlaySteps: 1,
+    $Idle: 3000,
+    $ArrowKeyNavigation: true,
     $FillMode: 5,
     $SlideshowOptions: {
       $Class: $JssorSlideshowRunner$,
-      Transitions: _SlideshowTransitions,
+      $Transitions: _SlideshowTransitions,
       $TransitionsOrder: 1
     },
     $BulletNavigatorOptions: {

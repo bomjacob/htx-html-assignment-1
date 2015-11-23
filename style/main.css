@@ -98,6 +98,17 @@ a:visited{
 	position: relative !important;
 	top: 3px !important;
 }
+.gal-caption {
+	position: absolute; top: 50px; right: 25px; width: 150px; height: 40px;
+}
+.gal-caption-inner p {
+	font-size: 24px;
+	font-family: PetitaLight;
+}
+.gal-caption-inner p span {
+	font-size: 22px;
+	color: rgba(0,0,0,0.6);
+}
 
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }

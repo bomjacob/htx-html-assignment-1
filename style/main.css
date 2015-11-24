@@ -80,6 +80,8 @@ a:visited{
 	font-size: 22px;
 	font-family: "PetitaLight";
 	letter-spacing: 1px;
+	-moz-outline:0 none;
+	outline:0 none;
 }
 .nav a:hover {
 	background: #9C30BD;

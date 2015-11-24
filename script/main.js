@@ -42,7 +42,7 @@ $(document).ready(function ($) {
         e.preventDefault();
         scrollTo = 0;
         if ($(this).attr('href') != '#top') {
-          scrollTo = $($(this).attr('href')).offset().top - navHeight + 2;
+          scrollTo = $($(this).attr('href')).offset().top - navHeight + 5;
         }
         $('html, body').animate({
           scrollTop: scrollTo
